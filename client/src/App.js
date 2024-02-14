@@ -1,5 +1,6 @@
 import Header from "./components/Header.jsx";
 import Clients from "./components/Clients.jsx";
+import Projects from "./components/Projects.jsx";
 import AddClientModal from "./components/AddClientModal.jsx";
 
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
@@ -35,6 +36,7 @@ function App() {
         <Header />
         <div className="container">
           <AddClientModal />
+          <Projects />
           <Clients />
         </div>
       </ApolloProvider>

@@ -81,7 +81,7 @@ export default function AddClientModal() {
                 <div className="mb-3">
                   <label className="form-label">Email</label>
                   <input
-                    type="text"
+                    type="email"
                     className="form-control"
                     id="email"
                     value={email}

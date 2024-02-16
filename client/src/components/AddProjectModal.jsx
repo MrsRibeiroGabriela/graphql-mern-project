@@ -107,6 +107,7 @@ export default function AddProjectModal() {
                         value={status}
                         onChange={(e) => setStatus(e.target.value)}
                       >
+                        <option hidden>Select Status</option>
                         <option value="new">Not Started</option>
                         <option value="progress">In Progress</option>
                         <option value="completed">Completed</option>
@@ -121,7 +122,7 @@ export default function AddProjectModal() {
                         value={clientId}
                         onChange={(e) => setClientId(e.target.value)}
                       >
-                        <option value="">Select Client</option>
+                        <option hidden>Select Client</option>
                         {data.clients.map((client) => (
                           <option key={client.id} value={client.id}>
                             {client.name}

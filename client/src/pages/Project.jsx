@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { FaAngleLeft } from "react-icons/fa";
 import Spinner from "../components/Spinner";
 import { useQuery } from "@apollo/client";
 import { GET_PROJECT } from "../queries/projectQueries";
@@ -17,8 +18,9 @@ export default function Project() {
     <>
       {!loading && !error && (
         <div className="mx-auto w-75 card p-5">
-          <Link to="/" className="btn btn-light btn-sm w-25 d-inline ms-auto">
-            Back
+          <Link to="/" className="btn btn-light btn-sm w-25 d-inline">
+            <FaAngleLeft className="icon" />
+            <span>Back</span>
           </Link>
           <h1>{data.project.name}</h1>
           <p>{data.project.description}</p>
@@ -28,11 +30,9 @@ export default function Project() {
 
           <ClientInfo client={data.project.client} />
 
-          {/* <EditProjectForm project={data.project} /> */}
-
-          <div className="d-flex flex-column">
-            <EditProjectModal project={data.project}/>
+          <div className="d-flex">
             <DeleteProjectButton projectId={data.project.id} />
+            <EditProjectModal project={data.project} />
           </div>
         </div>
       )}

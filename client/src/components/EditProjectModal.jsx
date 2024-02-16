@@ -25,7 +25,7 @@ export default function EditProjectModal({ project }) {
 
   return (
     <>
-      <div className="d-flex mt-1 ms-auto">
+      <div className="d-flex mt-1">
         <button
           type="button"
           className="btn btn-primary m-2"
@@ -88,6 +88,7 @@ export default function EditProjectModal({ project }) {
                     value={status}
                     onChange={(e) => setStatus(e.target.value)}
                   >
+                    <option hidden>Select Status</option>
                     <option value="new">Not Started</option>
                     <option value="progress">In Progress</option>
                     <option value="completed">Completed</option>

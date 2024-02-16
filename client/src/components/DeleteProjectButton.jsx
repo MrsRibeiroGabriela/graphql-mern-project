@@ -14,7 +14,7 @@ export default function DeleteProjectButton({ projectId }) {
     refetchQueries: [{query:GET_PROJECTS}],
   })
 
-  return <div className="d-flex mt-5 ms-auto">
+  return <div className="d-flex mt-1 ms-auto">
     <button className="btn btn-danger m-2" onClick={deleteProject}>
       <FaTrash className="icon" /> Delete Project
     </button>
